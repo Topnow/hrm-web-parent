@@ -7,12 +7,17 @@ import 'element-ui/lib/theme-default/index.css'
 import VueRouter from 'vue-router'
 import store from './vuex/store'
 import Vuex from 'vuex'
+
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
-import Mock from './mock'
-Mock.bootstrap();
+// import Mock from './mock'
+// Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+
+import axios from 'axios'
+axios.defaults.baseURL="http://localhost:9527/services";
+Vue.prototype.$http = axios
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
